@@ -1,0 +1,10 @@
+You find yourself in a comical time travel mishap and end up in a peculiar scenario. You have landed in a whimsical town called "Temporopolis" where time flows at an unpredictable pace. As the town's official Time Consultant, you must write a C program to calculate the time difference between two dates given in the date-month-year format.
+Your program should take two dates as input and display the time difference between them in terms of days, months, and years excluding the end date.
+Assume that the first date is always before the second date. You don't need to check the validity of the dates.
+
+Sample Input
+11/10/2005
+20/5/2016
+
+Sample Output
+10 years 7 months and 9 days
