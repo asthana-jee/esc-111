@@ -18,16 +18,29 @@ int main(){
     if(date1 > date2){
         month_diff--;
         if(month1 == 2 && (year1%400==0 || (year1%4==0 && year1%100 != 0))){
-            date_diff = 29%date1 + date2;
+            date_diff = 29 - date1;
         }
         else if(month1 == 2){
-            date_diff = 28%date1 + date2;
+            date_diff = 28 - date1;
         }
         else if((month1 <= 7 && month1%2 != 0)||(month1 > 7 && month1%2 == 0)){
-            date_diff = 31%date1 + date2;
+            date_diff = 31 - date1;
         }
         else{
-            date_diff = 30%date1 + date2;
+            date_diff = 30 - date1;
+        }
+
+        if(month2 == 2 && (year2%400==0 || (year2%4==0 && year2%100 != 0))){
+            date_diff += (date2-1)%29;
+        }
+        else if(month2 == 2){
+            date_diff += (date2-1)%28;
+        }
+        else if((month2 <= 7 && month2%2 != 0)||(month2 > 7 && month2%2 == 0)){
+            date_diff += (date2-1)%31;
+        }
+        else{
+            date_diff += (date2-1)%30;
         }
     }
     else{
